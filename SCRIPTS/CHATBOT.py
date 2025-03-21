@@ -6,11 +6,10 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Configure Gemini with the secure API key
 genai.configure(api_key=API_KEY)
 def chat_with_gpt(prompt):
     try:
-        model = genai.GenerativeModel("gemini-1.5-pro-latest")  # Updated model name
+        model = genai.GenerativeModel("gemini-1.5-pro-latest")
         response = model.generate_content(prompt)
         return response.text.strip()
 
