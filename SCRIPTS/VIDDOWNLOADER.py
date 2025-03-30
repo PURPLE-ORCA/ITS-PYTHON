@@ -9,6 +9,6 @@ def download_video(url):
         ydl.download([url])
 
 if __name__ == "__main__":
-    url = input("Enter YouTube URL: ")
+    url = input("Enter URL: ")
     download_video(url)
     print("✅Download complete!")
